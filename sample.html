@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Portfolio</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your external CSS file -->
+</head>
+<Script>document.addEventListener('DOMContentLoaded', function() {
+  const socialButton = document.getElementById('socialButton');
+  const popup = document.getElementById('popup');
+  const overlay = document.getElementById('overlay');
+  const closePopup = document.getElementById('closePopup');
+
+  socialButton.addEventListener('click', function() {
+      popup.style.display = 'block';
+      overlay.style.display = 'block';
+      document.body.style.overflow = 'hidden'; /* Disable scrolling */
+  });
+
+  closePopup.addEventListener('click', function() {
+      popup.style.display = 'none';
+      overlay.style.display = 'none';
+      document.body.style.overflow = 'auto'; /* Enable scrolling */
+  });
+
+  overlay.addEventListener('click', function() {
+      popup.style.display = 'none';
+      overlay.style.display = 'none';
+      document.body.style.overflow = 'auto'; /* Enable scrolling */
+  });
+});
+
+
+</Script>
+<style>
+    /* Basic styling for the About Me section */
+    .intro {
+        background-color: #111;
+        color: #fff;
+        padding: 60px 20px;
+        text-align: center;
+        border-radius: 10px;
+        margin: 20px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .intro h2 {
+    
+        color: #f00;
+        margin-bottom: 20px;
+        position: relative;
+        display: inline-block;
+        
+    }
+
+    .intro p {
+        font-size: 1.0rem;
+        line-height: 1.6;
+    }
+
+  
+</style>
+
+<body>
+    <div class="navbar">
+        <!-- <div class="logo">
+            <h1>SUJITH KURISETTI</h1>
+        </div> -->
+        <div class="menu">
+            <a href="#home">Home</a>
+            <a href="#About Me">AboutMe</a>
+            <a href="#education">Education</a>
+            <a href="#achievements">Achievements</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+        </div>
+    </div>
+
+
+    <section id="home" class="section home-section">
+        <div class="container">
+            <div class="home-content">
+                <div class="left-content">
+                    <img src="./Sujith_pic_black.jpg" alt="Your Name" class="header-image">
+                </div>
+                <div class="right-content">
+                  <h1 id="name">SUJITH KURISETTI</h1>
+                    <div class="quote">
+                        <p>"Difficult roads often leads to beautiful destinations"</p>
+                    </div>
+                    <button id="socialButton">Contact Me</button>
+                </div>
+            </div>
+           
+        </div>
+    </section>
+    <div class="popup" id="popup">
+      <div class="popup-content">
+          <span class="close" id="closePopup">&times;</span>
+          <a href="mailto:kurisettisaisujith@gmail.com" target="_blank">Email</a>
+          <a href="https://www.linkedin.com/in/saisujithkurisetti/" target="_blank">LinkedIn</a>
+          <a href="https://www.instagram.com/kurrisetty/" target="_blank">Instagram</a>
+      </div>
+  </div>
+    <!-- Background overlay -->
+<div class="overlay" id="overlay"></div>
+
+  <section id="About Me" class="section">
+    <div class="intro">
+        <h2>About Me</h2>
+        <p>Greetings! I am Sai Sujith Kurisetty, currently pursuing a Bachelor’s degree in Information Technology at Lakireddy Bali Reddy College of Engineering. With a robust proficiency in Java, Python, HTML, CSS, and JavaScript, I am dedicated to harnessing technology to address contemporary challenges. My academic journey boasts a consistent GPA of 9.29/10.0, underscoring my commitment to excellence.
+
+            Driven by a passion for innovation and problem-solving, I actively engage in community-driven initiatives, organizing web development events and fostering computer literacy among local school students. I am eager to contribute my skills and expand my horizons in a dynamic professional environment. [Currently seeking opportunities] where I can leverage my technical acumen and collaborate on transformative projects that drive meaningful change.</p>
+    </div>
+</section>
+
+    <section id="education" class="section">
+      <div class="section">
+        <h2>Education Route</h2>
+        <div class="route">
+            <div class="destination">
+                <h3>10th Grade</h3>
+                <p>Kakatiya Merit School(2018-2019)</p>
+            </div>
+            <div class="connector"></div>
+            <div class="destination">
+                <h3>Intermediate</h3>
+                <p>Aditya Junior College(2019-2021)</p>
+            </div>
+            <div class="connector"></div>
+            <div class="destination">
+                <h3>BTech</h3>
+                <p>Lakireddy College Of Engineering(2021-present)</p>
+            </div>
+        </div>
+    </div>
+    
+    </section>
+
+  
+    <section id="achievements" class="achievements-section">
+        <div class="container">
+            <h2>Achievements && Extra-Circular</h2>
+            <div class="achievements-list">
+                <div class="achievement">
+                    <div class="achievement-image" style="background-image: url('./topper.png');"></div>
+                    <div class="achievement-info">
+                        <h3>Academic Topper</h3>
+                        <p>Achieved top position in the department for the second year, resulting in the award of a prestigious
+                            scholarship worth ₹ 20,000</p>
+                             <a class="achievement_link" href="https://www.instagram.com/p/C4Abhq6tgXu/" target="_blank"><p>View</p></a> 
+                    </div>
+                </div>
+                <div class="achievement">
+                    <div class="achievement-image" style="background-image: url('./swecha.png');"></div>
+                    <div class="achievement-info">
+                        <h3>Member Of Swecha</h3>
+                        <p>Contributed what we learned to others with the help Of Swecha</p>
+                            <a class="achievement_link" href="https://www.instagram.com/p/CpXbw_VLbdq/?img_index=1" target="_blank"><p>View</p></a> 
+                    </div>
+                </div>
+                <div class="achievement">
+                    <div class="achievement-image" style="background-image: url('./web.png');"></div>
+                    <div class="achievement-info">
+                        <h3>Winner in Web Poster Presentation</h3>
+                        <p class="achievement-date">Garnered 1st place in the Web Project Expo held within the department</p>
+                        <a class="achievement_link" href="https://www.instagram.com/p/CloPkUwJbJ3/" target="_blank"><p>View</p></a> 
+                    </div>
+                </div>
+           
+                <div class="achievement">
+                    <div class="achievement-image" style="background-image: url('./ml.png');"></div>
+                    <div class="achievement-info">
+                        <h3>1st Place in Ml ProjectExpo</h3>
+                        <p>Submitted an advanced brain tumour detection system</p>
+                       
+                    </div>
+                </div>
+                <div class="achievement">
+                    <div class="achievement-image" style="background-image: url('./bci.png');"></div>
+                    <div class="achievement-info">
+                        <h3>Paper Presentation winner</h3>
+                        <p>Explained about BCI and Some Extenstion projects related to BCI</p>
+                        
+                    </div>
+                </div>
+
+
+                <!-- Add more achievements as needed -->
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <h2 id="p_separate">Projects</h2>
+            <div class="project-slider">
+                <div class="projects-wrapper">
+                    <div class="project">
+                        <h3>Dynamic College Fest Website Creation</h3>
+                        <p>I made a website for our college event using HTML, CSS, and JavaScript. We created sections for event schedules, registration forms,
+                            and performer information. CSS helped keep everything looking the same, and JavaScript added interactive features like schedules. Our
+                            website helped spread the word about the event and made it easy for people to join in..</p>
+                        <a href="https://www.lbrce.ac.in/lakshya2k24/" class="project-button" target="_blank">View Project</a>
+                    </div>
+                    <div class="project">
+                        <h3>React ECommerece Site(Taking amazon Reference)</h3>
+                        <p>Created an e-commerce site inspired by Amazon, utilizing React JS along with CSS. This project involved developing various features such as 
+                            product listings, shopping cart functionality, and user authentication. The experience provided deeper insights into advanced web development 
+                            techniques and best practices for building scalable e-commerce platforms</p>
+                        <a href="https://amzsujith.netlify.app/" class="project-button" target="_blank">View Project</a>
+                    </div>
+
+              
+                    <div class="project">
+                        <h3>Web Development for NGO: Step Ahead for Equality</h3>
+                        <p>This project was dedicated to the NGO "Step Ahead for Equality," utilizing HTML and CSS for its development. Through this end eavor,
+                            we gained valuable insights into client interaction and management. We meticulously catered to the specific requirements of the NGO,
+                            prioritizing usability and accessibility. Our design approach emphasized simplicity and clarity to effectively communicate the
+                            organization's message</p>
+                        <a href="https://safeorg.in/" class="project-button" target="_blank">View Project</a>
+                    </div>
+                    <div class="project">
+                        <h3>First E-commerce Venture: A Responsive Website</h3>
+                        <p>In my first project, I focused on creating a responsive e-commerce website using HTML, CSS, and JavaScript. This undertaking caught
+                            my full attention, resulting in its successful completion. Throughout the process, I got significant knowledge and learned the
+                            complexities of web building firsthand.</p>
+                        <a href="https://github.com/kurisettisaisujith/Frontend-EcommerceSite" class="project-button" target="_blank">View Project</a>
+                    </div>
+                    <div class="project">
+                        <h3>Dynamic College Fest Website Creation</h3>
+                        <p>I made a website for our college event using HTML, CSS, and JavaScript. We created sections for event schedules, registration forms,
+                            and performer information. CSS helped keep everything looking the same, and JavaScript added interactive features like schedules. Our
+                            website helped spread the word about the event and made it easy for people to join in..</p>
+                        <a href="https://www.lbrce.ac.in/lakshya2k25/" class="project-button" target="_blank">View Project</a>
+                    </div>
+                    <div class="project">
+                        <h3>Freelance Project: E-Commerce Product Showcase & Pricing for a Retail Store:</h3>
+                        <p>Designed and developed a custom product catalog and pricing page for Client's Business, improving the user experience by organizing 
+                            products with clear descriptions and pricing. The project streamlined product navigation, making it easier for customers to view and purchase 
+                            items, ultimately enhancing the business's online visibility and sales potential.</p>
+                        <a href="https://ktmart.netlify.app/" class="project-button" target="_blank">View Project</a>
+                    </div>
+                    <div class="project">
+                        <h3>Personalized Learning & Tutoring Tool (SIH): </h3>
+                        <p>Developed a personalized learning and tutoring tool. As the Frontend Developer, I utilized the MERN stack to design an intuitive, user-friendly 
+                            interface that enables students to find the best teachers for their needs. The tool allows users to search for educators by subject, view detailed 
+                            information, and receive personalized learning recommendations, thereby enhancing the overall learning experience. 
+                            </p>
+                        <a href="https://github.com/kurisettisaisujith/Personalized-Learning-Tutoring-Tool-" class="project-button" target="_blank">View Project</a>
+                    </div>
+                </div>
+            </div>
+            <div class="arrow">
+                <span class="arrow-left" onclick="moveSlider('left')">&#10094;</span>
+                <span class="arrow-right" onclick="moveSlider('right')">&#10095;</span>
+            </div>
+        </div>
+    </section>
+    
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <h2 id="p_separate">Skills</h2>
+            <div class="skill">
+                <span class="skill-label">C Programming</span>
+                <div class="skill-progress">
+                    <div class="progress-bar" style="width: 80%;">80%</div>
+                </div>
+            </div>
+            <div class="skill">
+                <span class="skill-label">Java Programming</span>
+                <div class="skill-progress">
+                    <div class="progress-bar" style="width: 85%;">85%</div>
+                </div>
+            </div>
+            <div class="skill">
+                <span class="skill-label">SQL</span>
+                <div class="skill-progress">
+                    <div class="progress-bar" style="width: 75%;">75%</div>
+                </div>
+            </div>
+            <div class="skill">
+                <span class="skill-label">Python Programming</span>
+                <div class="skill-progress">
+                    <div class="progress-bar" style="width: 70%;">70%</div>
+                </div>
+            </div>
+            <div class="skill">
+                <span class="skill-label">HTML, CSS, JavaScript</span>
+                <div class="skill-progress">
+                    <div class="progress-bar" style="width: 85%;">85%</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>Social Media & Coding Profiles:</p>
+            <ul class="social-links">
+                
+                <li><a href="https://github.com/kurisettisaisujith" target="_blank">GitHub</a></li>
+               <li>  <a href="https://www.linkedin.com/in/saisujithkurisetti/" target="_blank">LinkedIn</a></li>
+                <li><a href="https://www.instagram.com/kurrisetty/" target="_blank">Instagram</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script >
+        let currentIndex = 0;
+const projects = document.querySelectorAll('.project');
+const projectsWrapper = document.querySelector('.projects-wrapper');
+
+function moveSlider(direction) {
+    const projectWidth = projects[0].offsetWidth + parseInt(window.getComputedStyle(projects[0]).marginRight);
+    const maxIndex = projects.length - 1;
+    
+    if (direction === 'left' && currentIndex > 0) {
+        currentIndex--;
+    } else if (direction === 'right' && currentIndex < maxIndex) {
+        currentIndex++;
+    }
+    
+    projectsWrapper.style.transform = `translateX(-${currentIndex * projectWidth}px)`;
+}
+
+    </script>
+</body>
+</html>

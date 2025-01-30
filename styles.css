@@ -1,0 +1,542 @@
+body {
+    margin: 0;
+    padding: 0;
+  
+    background-color: #000;
+    color: #fff;
+    font-family:cursive;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.navbar {
+    background-color: #111;
+    padding: 10px 20px;
+    display: flex;
+    justify-content:center;
+    position: fixed;
+    width: 100%;
+   z-index: 1000;
+   
+}
+
+
+
+
+/* nav  ---- bar*/
+.navbar .menu {
+    display: flex;
+    justify-content:space-evenly; /* Distribute items evenly */
+    width: 100%; /* Adjust width as needed */
+}
+
+.navbar .menu a {
+    color: #fff;
+    font-size:medium;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: color 0.6s;
+    border-top: 1px solid red;
+    border-left: 1px solid #f00;
+
+}
+
+.navbar .menu a:hover {
+    color: #fff; /* Red */
+}
+
+
+.section {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.section h2 {
+    color: #f00; /* Red */
+}
+
+.section-content {
+    margin-top: 20px;
+}
+
+.main-footer {
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.social-links {
+    list-style-type: none;
+    padding: 0;
+}
+
+.social-links li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.social-links li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: color 0.3s;
+}
+
+.social-links li a:hover {
+    color: #f00; /* Red */
+}
+
+.home-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.left-content {
+    flex: 1;
+
+}
+
+    .header-image {
+        max-width: 100%;
+        height: auto;
+        border: 5px solid transparent; /* Initial transparent border */
+        transition: border-color 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth transitions */
+        transform: scale(0.9); 
+        
+    }
+    
+    .header-image:hover {
+        transform: scale(1.0); 
+       /* Red border color on hover */
+        /* Zoom in effect */
+    }
+    
+
+
+
+/* .header-image:hover {
+    border-left:  5px solid #fff;
+   border-top: 5px solid #f00;
+   border-right: 5px solid #fff;
+   border-bottom: 5px solid #f00; /* Red border color on hover 
+} */
+
+.right-content {
+    flex: 1;
+    font-family:cursive;
+    color: #f00;
+    font-size: 20px;
+   
+}
+.right-content h1{
+    /* flex: 1;
+    font-family:cursive;
+    color: #f00;
+    font-size: 20px; */
+   
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #f00, 0 0 20px #f00, 0 0 30px #f00, 0 0 40px #f00;
+    }
+    to {
+        text-shadow: 0 0 20px #f00, 0 0 30px #f00, 0 0 40px #f00, 0 0 50px #f00;
+    }
+}
+
+
+.quote {
+    animation: glow 1s infinite alternate;
+   
+    color: #fff; /* Red */
+    margin-top: 20px;
+}
+/* Styles for the popup container */
+/* .popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: none; 
+} */
+#socialButton:hover{
+     /* border-right:  5px solid #fff;
+    border-top:  5px solid #fff; 
+    border-left:  5px solid #f00;
+    border-bottom:  5px solid #f00; */
+    transform: scale(1.1);
+    cursor: pointer;
+   
+ 
+
+}
+#socialButton{
+    width:200px ;
+    height:40px ;
+    background-color:#f00 ;
+    color:#fff ;
+    font-family: cursive;
+    font-size: 15px;
+    border-left:  5px solid #fff;
+    border-bottom:  5px solid #fff;
+ 
+}
+/* Styles for the overlay */
+/* Styles for the overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    backdrop-filter: blur(5px); /* Blur effect for modern browsers */
+    z-index: 999; /* Below popup */
+    display: none; /* Initially hidden */
+    overflow-y: auto; /* Allow scrolling */
+}
+
+/* Styles for the popup */
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px #f00;
+    z-index: 1000;
+    display: none; /* Initially hidden */
+    max-width: 90%; /* Maximum width */
+    max-height: 90%; /* Maximum height */
+    overflow-y: auto; /* Allow scrolling */
+    animation: popup-animation 0.5s ease-out;
+}
+@keyframes popup-animation {
+    from {
+        transform: translate(-50%, -50%) scale(0.5);
+        opacity: 0;
+    }
+    to {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+}
+
+.popup-content {
+    padding: 30px; /* Increased padding */
+    text-align: center;
+    width: 200px;
+    height: 100px;
+}
+.popup-content a{
+
+   border: 1px solid rgb(241, 9, 9);
+    border-radius: 50%;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 24px; /* Larger font size */
+    color: #333;
+}
+
+.close:hover {
+    color: #f00; /* Red color on hover */
+}
+
+.popup a {
+    display: block;
+    text-decoration: none;
+    color: #333;
+    margin-bottom: 15px; /* Increased margin */
+}
+
+.popup a:hover {
+   background-color: #f00;
+   color: #fff;
+}
+
+
+/* Styles for the social media links */
+/* .popup a {
+    display: block;
+    text-decoration: none;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.popup a:hover {
+    text-decoration: underline;
+} */
+/* Animation for the name */
+/* Animation for the name */
+.section {
+    padding: 45px;
+}
+
+.route {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.destination {
+    text-align: center;
+    width: 200px;
+}
+
+.connector {
+    flex: 1;
+    height: 2px;
+    background-color: #fff;
+    position: relative;
+}
+
+.connector::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+    left: calc(50% - 5px);
+}
+
+.destination h3 {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.destination p {
+    color: #ccc;
+}
+
+/* Adjust styles as per your design preferences */
+
+/* Acheivements  CSS*/
+.achievements-section {
+    padding: 50px 0;
+    background-color: #000; /* Black background for the section */
+}
+
+.achievements-section  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+#achievements h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 1.9em;
+    color: #ff0000; /* Red color for the heading */
+}
+
+.achievements-list {
+    display: flex;
+    overflow-x: scroll;
+    padding: 10px 0; /* Padding to avoid content touching the edges */
+    gap: 20px; /* Space between cards */
+    scroll-behavior: smooth; /* Smooth scrolling effect */
+    -ms-overflow-style: none;  /* Hide scrollbar in Internet Explorer and Edge */
+    scrollbar-width: none;  /* Hide scrollbar in Firefox */
+}
+
+.achievements-list::-webkit-scrollbar {
+    display: none;  /* Hide scrollbar in WebKit browsers (Chrome, Safari) */
+}
+.achievement {
+    background: #1c1c1c; /* Dark background for the cards */
+    box-shadow: 0 8px 16px rgba(255, 0, 0, 0.4); /* Red shadow for the cards */
+    border-radius: 10px;
+    overflow: hidden;
+    flex: 0 0 300px; /* Fixed width for cards */
+    transition: transform 0.3s;
+}
+
+.achievement:hover {
+    transform: translateY(-10px);
+}
+
+.achievement-image {
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+.achievement-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.achievement-info h3 {
+    font-size: 1.5em;
+    margin: 0 0 10px;
+    color: #ff0000; /* Red color for the achievement name */
+}
+
+.achievement-info p {
+    margin: 0 0 10px;
+    color: #fff; /* White text for descriptions */
+}
+.achievement_link {
+    font-style: italic;
+    color: #ff0000;
+ 
+    /* Light grey color for the date */
+}
+.achievement_link p {
+    font-style: italic;
+    color: #ff0000;
+   
+    /* Light grey color for the date */
+}
+
+
+/* skill */
+
+.skills-section {
+    padding: 50px 0;
+    background-color: #000;
+    text-align: center;
+}
+
+
+
+.skill {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.skill-label {
+    flex: 1;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #fff;
+}
+
+.skill-progress {
+    flex: 2;
+    margin-left: 20px;
+    height: 24px;
+    background-color: #333; /* Dark background color */
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    line-height: 24px;
+    text-align: center;
+    color: #fff;
+    background-color: #ff0000; /* Red color for the progress bar */
+    transition: width 0.6s ease;
+}
+
+/* projects */
+.projects-section {
+    padding: 50px 0;
+    background-color: #000;
+    text-align: center;
+}
+
+
+#p_separate{
+    color: #ff0000;
+}
+
+.project-slider {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.projects-wrapper {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.project {
+    flex: 0 0 100%;
+    max-width: 100%;
+    background-color: #333; /* Dark background color */
+    border-radius: 10px;
+    padding: 20px;
+    margin-right: 20px;
+    text-align: left;
+}
+
+.project h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+   
+}
+
+.project p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.project-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff0000; /* Red color for button */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.project-button:hover {
+    background-color: #e60000; /* Darker red for hover state */
+}
+
+.arrow {
+    margin-top: 20px;
+}
+
+.arrow-left, .arrow-right {
+    cursor: pointer;
+    font-size: 2em;
+    color: #ff0000; /* Red color for arrows */
+    transition: color 0.3s;
+}
+
+.arrow-left:hover, .arrow-right:hover {
+    color: #e60000; /* Darker red on hover */
+}
+
+/*Certificates*/
+
